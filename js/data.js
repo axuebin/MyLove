@@ -11,7 +11,7 @@ var together = [{
 },{
     title: "本子",
     date: "2013/11/17",
-    img: "./img/notebook.png",
+    img: "./img/notebook.jpg",
     content: "你说你要笔记本，我就去买了，刚好看到这系列，终于给我找出这三本，送给你。你这个傻瓜居然没看出来这代表什么，唉。"
 },{
     title: "First Day",
