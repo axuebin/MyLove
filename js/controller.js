@@ -7,7 +7,7 @@ console.log("controller");
  */
 var cardGenerator = function(dataArr) {
     var oBody = document.getElementById('body');
-    var htmlStr = ['<h1 class="title">Love Story</h1>','<div id="elapseClock"><span class="digit">0</span> 年 <span class="digit">0</span> 月 <span class="digit">0</span> 天 <span class="digit">0</span> 时 <span class="digit">0</span> 分 <span class="digit">0</span> 秒</div>','<div class="time"></div>'];
+    var htmlStr = ['<h1 class="title">Love Story</h1>','<div id="elapseClock"></div>','<div class="time"></div>'];
 
     for (var i = 0; i < dataArr.length; i++) {
         if (i % 2 === 0) {
@@ -56,6 +56,7 @@ function timeElapse(date, mode){
             current.setDate(current.getDate() - months);
         }
     }
+    console.log("years");
     seconds = Math.round((current.getTime() - date.getTime()) / 1000);
     if (isNaN(days)) {
         days = Math.floor(seconds / (3600 * 24));
