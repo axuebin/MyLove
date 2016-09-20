@@ -56,7 +56,6 @@ function timeElapse(date, mode){
             current.setDate(current.getDate() - months);
         }
     }
-    console.log("years");
     seconds = Math.round((current.getTime() - date.getTime()) / 1000);
     if (isNaN(days)) {
         days = Math.floor(seconds / (3600 * 24));
@@ -99,14 +98,14 @@ function timeElapse(date, mode){
     
     var result = "";
     if (mode == 1) {
-        result = (years > 0 ? "<span class=\"digit\">" + years + "</span> 年 ":"")
+        result = (years > 0 ? "❤ <span class=\"digit\">" + years + "</span> 年 ":"")
             + (months >= 0 ? "<span class=\"digit\">" + months + "</span> 月 ":"")
             + "<span class=\"digit\">" + days + "</span> 天 "
             + "<span class=\"digit\">" + hours + "</span> 时 "
             + "<span class=\"digit\">" + minutes + "</span> 分 "
-            + "<span class=\"digit\">" + seconds + "</span> 秒";
+            + "<span class=\"digit\">" + seconds + "</span> 秒 ❤";
     } else {
-        result = "<span class=\"digit\">" + days + "</span> 天 <span class=\"digit\">" + hours + "</span> 时 <span class=\"digit\">" + minutes + "</span> 分 <span class=\"digit\">" + seconds + "</span> 秒";
+        result = "❤ <span class=\"digit\">" + days + "</span> 天 <span class=\"digit\">" + hours + "</span> 时 <span class=\"digit\">" + minutes + "</span> 分 <span class=\"digit\">" + seconds + "</span> 秒 ❤";
     }
     
     $("#elapseClock").html(result);
